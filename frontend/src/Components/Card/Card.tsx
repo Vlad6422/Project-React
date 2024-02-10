@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import "./Card.css"
-type Props = {}
+import { CompanySearch } from '../../company';
+import AddPortfolio from '../Portfolio/AddPortfolio/AddPortfolio';
+interface Props {
+    id: string;
+    searchResult: CompanySearch;
+    onPortfolioCreate: (e: SyntheticEvent) => void;
+}
 
-const Card = (props: Props) => {
+const Card: React.FC<Props> = ({ id, searchResult, onPortfolioCreate }: Props): JSX.Element => {
     return (
         <div className='card'>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" alt="img" />
+            <img alt="Logo..." />
             <div className='details'>
-                <h2>Bit Coin</h2>
-                <p>20$</p>
-                
+                <h2>{searchResult.name} ({searchResult.symbol})</h2>
+                <p>{searchResult.currency}</p>
             </div>
-            <div className='info'><button>Купить</button></div>
+            <div className='info'>
+                <p>{searchResult.exchangeShortName} - {searchResult.stockExchange}</p>
+                <AddPortfolio onPortfolioCreate={onPortfolioCreate} symbol={searchResult.symbol} />
+            </div>
         </div>
-        
     )
 }
 
