@@ -17,7 +17,7 @@ const DesignPage = (props: Props) => {
     <h1>Finshark Design Page</h1>
     <h2>This is Finshark's design page.</h2>
     <RatioList data={testIncomeStatementData} config ={tableConfig}/>
-    <Table/>
+    <Table data={testIncomeStatementData} config = {tableConfig}/>
     </>
   )
 }
