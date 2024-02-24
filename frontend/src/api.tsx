@@ -51,7 +51,7 @@ export const getCompanyProfile = async (query: string) => {
   export const getBalanceSheet = async (query: string) => {
     try {
       const data = await axios.get<CompanyBalanceSheet[]>(
-        `https://financialmodelingprep.com/api/v3/balance-sheet-statement/${query}?limit=40&apikey=${process.env.REACT_APP_API_KEY}`
+        `https://financialmodelingprep.com/api/v3/balance-sheet-statement/${query}?apikey=${process.env.REACT_APP_API_KEY}`
       );
       return data;
     } catch (error: any) {
