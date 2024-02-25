@@ -1,7 +1,5 @@
-import React from 'react'
 import { testIncomeStatementData } from './testData'
-import { dblClick } from '@testing-library/user-event/dist/click';
-import { config } from 'dotenv';
+
 const data = testIncomeStatementData;
 type Props = {
     config:any;

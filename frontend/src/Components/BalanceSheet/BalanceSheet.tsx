@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CompanyBalanceSheet } from '../../company';
 import { useOutletContext } from 'react-router-dom';
 import { getBalanceSheet } from '../../api';
@@ -53,7 +53,7 @@ const BalanceSheet = (props: Props) => {
       {companyData ? (
         <RatioList config={config} data={companyData} />
       ) : (
-        <Spinner/>
+        <Spinner />
       )}
     </>
   );
