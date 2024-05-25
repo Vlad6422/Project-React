@@ -11,7 +11,7 @@ import CashFlowStatement from "../Components/CashFlowStatement/CashFlowStatement
 
 export const router = createBrowserRouter([
     {
-        path: "/Project-React",
+        path: "/StocksMonitoring",
         element: <App />,
         children: [
             {
