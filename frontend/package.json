@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://vlad6422.github.io/Project-React/",
+  "homepage": "https://vlad6422.github.io/StocksMonitoring/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
